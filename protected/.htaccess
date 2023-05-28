@@ -1,0 +1,7 @@
+AuthType Basic
+AuthBasicProvider ldap
+AuthName "Roaming Access"
+AuthLDAPURL ldap://ds.cse.msu.edu:389/ou=People,dc=cse,dc=msu,dc=edu?uid?sub
+AuthLDAPGroupAttribute memberUid
+AuthLDAPGroupAttributeIsDN off
+Require valid-user

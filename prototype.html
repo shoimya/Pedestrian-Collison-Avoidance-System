@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PCAS3/Prototype</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="container">
+        <h1>Our Prototype</h1>
+         
+        <iframe src="Build/index.html" frameborder="0" width="1280" height="800"></iframe>
+                    
+
+
+
+        <img src="img/pro-img1.png" alt="">
+        <img src="img/pro-img2.png" alt="">
+        <img src="img/pro-img3.png" alt="">
+        <h1>Moving then Stopped Pedestrian</h1>
+        <p>These scenarios can be seen in table 1. In these scenarios, the pedestrian begins a distance of -7 meters away from the vehicle. The pedestrian begins moving immediately but comes to a halt at a position of y meters away from the vehicle. This value y varies based on the selected scenario.</p>
+        <p>In scenario 2, the system makes the vehicle come to a full stop. This is because the system has determined that the pedestrian is capable of moving into the path of the vehicle at any moment. In order to bypass this, the driver should manually accelerate the vehicle.</p>
+        <h1>Static then Moving Pedestrian</h1>
+        <p>These scenarios can be seen in table 2. In these scenarios, the pedestrian begins a distance of -y meters away from the vehicle. The pedestrian begins moving after a delay of s seconds at a speed of 10 kph. These values for y and s vary based on the selected scenario.</p>
+        <h1>Static Pedestrian</h1>
+        <p>These scenarios can be seen in table 3. In these scenarios, the pedestrian does not move. They remain stationary at a distance of y meters away. This value y varies based on the selected scenario.</p>
+        <p>In scenario 9, the system makes the vehicle come to a full stop. This is because the system has determined that the pedestrian is capable of moving into the path of the vehicle at any moment. In order to bypass this, the driver should manually accelerate the vehicle.</p>
+        <h1>Failsafe Mode</h1>
+        <p>This button switches how the car interacts in each scenario. It switches between regular and failsafe mode (in reality triggered by hardware issues or inclement weather). In this mode, it changes the response time to reach a requested deceleration from 200 ms to 900 ms. The visible result of this is a minor increase in the overall time it takes to decelerate.</p>
+        <h1>Statistics</h1>
+        <p>At the top of the prototype, you are able to see the current speed of the vehicle. The pedestrian is always either static or moving at 10 kph, so this value is excluded from the displayed statistics.</p>
+        <h2>Prototype Constraints</h2>
+        <p>There are several other factors occurring behind the scenes in this prototype. It accounts for the following information:</p>
+        <h1>ABS / AES</h1>
+        <p>The deceleration accuracy is +/- 2% The response time to reach the requested deceleration is 200 ms normally, and 900 ms in failsafe mode.</p>
+        <p>The release time is 100 ms.</p>
+        <p>The maximum deceleration is 0.7 g, where 1g = 9.81 m/s^2</p>
+        <h1>Vehicle</h1>
+        <p>Normal steady state speed is 50 kph Accelerating to steady state speed is .25 g</p>
+        <p>The vehicle is 2m wide and long, 1m in each direction from the origin</p>
+        <p>Always initially at steady state speed</p>
+        <p>Always moves along the X axis</p>
+        <p>Initially at x,y = 0m,0m</p>
+        <h1>Pedestrian</h1>
+        <p>Can change velocity with infinite acceleration</p>
+        <p>The size of the pedestrian is a circle with a 0.5m diameter</p>
+        <p>The pedestrian can only move at a right angle to the vehicle path</p>
+        <p>Initially at x,y = 35m,-7m</p>
+
+	                <p>Please direct all questions to Dr. Betty H.C. Cheng at chengb@msu.edu</p>
+                <video width="750" height="550" controls>
+                  <source src="2022-12-04 12-09-47.mp4" type="video/mp4">
+                </video>
+    </div>
+</body>
